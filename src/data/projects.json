@@ -7,8 +7,39 @@
     "description": "A platform that connects local energy communities to distribution and transmission grids across Austria, Czechia and Slovakia. Municipalities, power producers and citizens each get their own entry point, from mapping clusters to financing them with green bonds.",
     "category": "Enery.Lab",
     "team": "Synapse",
-    "highlight": { "y": 60, "height": 900 },
+    "highlight": {
+      "y": 60,
+      "height": 900
+    },
     "fullHeight": 3720,
     "featured": true
+  },
+  {
+    "slug": "proklepni-to",
+    "url": "https://proklepni-to.macaly.app",
+    "title": "Proklepni to",
+    "tagline": "Co vás trápí na pravidlech z EU?",
+    "description": "Czech-language tool where people write or say what annoys them about EU or Czech rules, such as cars, boilers or fuel prices. It sorts what is true from myth, says who decided it, and helps users write to their MEP. It states it is not an official EU or government site.",
+    "category": "Uncategorized",
+    "highlight": {
+      "y": 0,
+      "height": 900
+    },
+    "fullHeight": 1029,
+    "featured": false
+  },
+  {
+    "slug": "europarun",
+    "url": "https://europarun.macaly.app",
+    "title": "EUROPARUN",
+    "tagline": "Jump across Europe in a pixel-art runner",
+    "description": "A mobile-friendly pixel-art endless runner where players jump across European cities and collect postcards. It has a public hackathon leaderboard that shows only a generated nickname, with no name, email or location collected.",
+    "category": "Uncategorized",
+    "highlight": {
+      "y": 0,
+      "height": 900
+    },
+    "fullHeight": 1084,
+    "featured": false
   }
 ]

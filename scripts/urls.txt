@@ -1,3 +1,5 @@
 # One project per line:  url | team (optional) | category (optional)
 # Then run:  npm run capture
 https://grid-connect-nexus.lovable.app/ | Synapse | Enery.Lab
+https://proklepni-to.macaly.app
+https://europarun.macaly.app
