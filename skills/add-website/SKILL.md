@@ -94,9 +94,24 @@ npm run build
 
 `validate` checks required fields, tagline length, no leftover drafts, highlight bounds, and that all four images exist. **Fix every reported problem and re-run until it prints `✓`.** Do not report success before both commands pass.
 
-## 6. Report
+## 6. Deploy (automatic)
 
-Tell the user, per site: slug, final title/tagline, whether it is featured or hidden, and anything you were unsure about (e.g. error page, thin text, guessed category). Do not commit or push unless asked.
+The site is hosted on GitHub Pages and **redeploys on every push to `main`** (`.github/workflows/deploy.yml`, which re-runs validate and build). Once step 5 passes, publish:
+
+```bash
+git add scripts/urls.txt src/data/projects.json public/previews capture-output
+git commit -m "Add <slug(s)> to showcase"
+git push origin main
+gh run watch --exit-status   # optional: wait for the deploy to finish
+```
+
+Live URL: https://peterwolfframm.github.io/cbd-showcase/
+
+Only deploy sites that passed validation. Skip hidden/error-page sites (they stay out of the commit message but may be committed as `hidden`). If the push or workflow fails, show the user the error.
+
+## 7. Report
+
+Tell the user, per site: slug, final title/tagline, whether it is featured or hidden, the live URL, and anything you were unsure about (e.g. error page, thin text, guessed category).
 
 ## Rules for any model
 
