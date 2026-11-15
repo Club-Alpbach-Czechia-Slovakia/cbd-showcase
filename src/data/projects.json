@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "grid-connect-nexus",
+    "url": "https://grid-connect-nexus.lovable.app/",
+    "title": "Synapse",
+    "tagline": "One continent. One living grid.",
+    "description": "A platform that connects local energy communities to distribution and transmission grids across Austria, Czechia and Slovakia. Municipalities, power producers and citizens each get their own entry point, from mapping clusters to financing them with green bonds.",
+    "category": "Enery.Lab",
+    "team": "Synapse",
+    "highlight": { "y": 60, "height": 900 },
+    "fullHeight": 3720,
+    "featured": true
+  }
+]
