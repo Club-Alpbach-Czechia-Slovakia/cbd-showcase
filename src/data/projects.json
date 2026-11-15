@@ -45,15 +45,29 @@
   {
     "slug": "zdlmt9udmf0q0ucc93z5vne6",
     "url": "https://zdlmt9udmf0q0ucc93z5vne6.macaly.app",
-    "title": "AI at School",
+    "title": "Keep your competence while using AI",
     "tagline": "Learn with AI, think for yourself.",
-    "description": "We educate the whole school community in the proper use of artificial intelligence while developing and protecting students’ cognitive and creative skills.",
+    "description": "A project for lower secondary (ages 11-15) and upper secondary school students (15-19). We educate the whole school community in the proper use of artificial intelligence while developing and protecting students’ cognitive and creative skills.",
     "category": "Uncategorized",
     "highlight": {
       "y": 57,
       "height": 900
     },
     "fullHeight": 4394,
+    "featured": false
+  },
+  {
+    "slug": "smr-horizon-initiative-michalkuba31",
+    "url": "https://smr-horizon-initiative.michalkuba31.chatgpt.site/",
+    "title": "SMR are the HORIZON",
+    "tagline": "Levnější energie? Práce doma? Česko v čele.",
+    "description": "A tool for SMR advocates to get informed and involved.",
+    "category": "Uncategorized",
+    "highlight": {
+      "y": 1101,
+      "height": 1000
+    },
+    "fullHeight": 3374,
     "featured": false
   }
 ]
