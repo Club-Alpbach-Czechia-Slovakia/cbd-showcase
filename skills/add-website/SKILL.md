@@ -124,3 +124,7 @@ Tell the user, per site: slug, final title/tagline, whether it is featured or hi
 ## Using the gallery in another Lovable project
 
 After steps 1-5, copy the changed `public/previews/<slug>/` folders and the new entries of `src/data/projects.json` into the target repo (`public/previews/` and `src/data/showcase-projects.json`). See `lovable/README.md`.
+
+## Custom domain
+
+To serve the gallery on a subdomain: put the hostname (one line, e.g. `showcase.example.com`) in `public/CNAME`, add a DNS `CNAME` record from that subdomain to `peterwolfframm.github.io`, then run `gh api -X PUT repos/PeterWolfframm/cbd-showcase/pages -f cname=<hostname> -F https_enforced=true` after DNS resolves. The deploy workflow then builds with root paths, and GitHub redirects the old github.io URL to the new domain.
