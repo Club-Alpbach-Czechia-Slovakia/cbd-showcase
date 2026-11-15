@@ -37,3 +37,7 @@ npm run build                     # static site in dist/, deploy anywhere
 - Sites that answer with an HTTP error (for example password-protected ones) are flagged during capture. Their screenshots will show the error page.
 - The capture script dismisses cookie banners, hides the "Edit with Lovable" badge, forces scroll-reveal content to be visible and caps full-page screenshots at 9000px.
 - To put the gallery into the Lovable site, see [INTEGRATION.md](INTEGRATION.md).
+
+## Reuse in another Lovable / React project
+
+Copy `skills/integrate-showcase/` into the target repo's `.claude/skills/` (or `~/.claude/skills/`), then ask Claude Code: *"add the CBD showcase gallery to this app"*. See [INTEGRATION.md](INTEGRATION.md) for the manual steps.
