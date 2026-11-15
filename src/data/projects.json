@@ -68,5 +68,19 @@
     },
     "fullHeight": 2120,
     "featured": false
+  },
+  {
+    "slug": "peterwolfframm-meshtastic-esp32s3-eink",
+    "url": "https://peterwolfframm.github.io/meshtastic-esp32s3-eink/",
+    "title": "mesheink",
+    "tagline": "A solar-powered mesh node you can build at home",
+    "description": "An open-hardware LoRa node running Meshtastic with an E-Ink screen, designed for off-grid messaging without internet or a mobile network. The site covers hardware, build and solar guides, accessibility add-ons such as a Braille keyboard, and in-browser verification of signed firmware releases. It states it is an unofficial community project, not affiliated with Meshtastic.",
+    "category": "Uncategorized",
+    "highlight": {
+      "y": 97,
+      "height": 960
+    },
+    "fullHeight": 2065,
+    "featured": false
   }
 ]

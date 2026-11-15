@@ -1,0 +1,89 @@
+{
+  "slug": "peterwolfframm-meshtastic-esp32s3-eink",
+  "url": "https://peterwolfframm.github.io/meshtastic-esp32s3-eink/",
+  "finalUrl": "https://peterwolfframm.github.io/meshtastic-esp32s3-eink/",
+  "capturedAt": "2026-11-15T12:03:25.649Z",
+  "title": "Home · Meshtastic E-Ink Node",
+  "metaDescription": "Open-hardware, solar-powered Meshtastic E-Ink node for ESP32-S3: build guide, pinouts, verifiable firmware, accessibility add-ons. EN · CS · PL.",
+  "ogTitle": "Meshtastic E-Ink Node",
+  "ogDescription": "Open-hardware, solar-powered, off-grid mesh node you can build at home. Verifiable post-quantum signed firmware.",
+  "headings": [
+    {
+      "level": 1,
+      "text": "A solar-powered mesh node you can build at home."
+    },
+    {
+      "level": 3,
+      "text": "Off-grid mesh messaging"
+    },
+    {
+      "level": 3,
+      "text": "Low-power E-Ink display"
+    },
+    {
+      "level": 3,
+      "text": "Verifiable firmware"
+    },
+    {
+      "level": 3,
+      "text": "Runs on sunlight"
+    },
+    {
+      "level": 3,
+      "text": "Delivered assembled, open to build"
+    },
+    {
+      "level": 3,
+      "text": "Accessible for deaf and blind people"
+    },
+    {
+      "level": 2,
+      "text": "How trust works here"
+    },
+    {
+      "level": 2,
+      "text": "How questions work here"
+    }
+  ],
+  "bodyText": "Skip to content mesheink EN CS PL Home Blackout demo Hardware Build Solar Open hardware Accessibility Q&A Verify Security Releases OPEN HARDWARE · OFF-GRID · ESP32-S3 + E-INK A solar-powered mesh node you can build at home. An open-hardware LoRa node running Meshtastic with an E-Ink screen. Every household receives one fully assembled from the state, so soldering is optional: the schematics are open for anyone who wants to build their own. You can also register for accessibility add-ons such as a Braille keyboard or a haptic skin band. Every firmware release can be verified in your browser before you flash it. See it work in a blackout → Build it yourself Q&A and pinout Accessibility registration MESH · 12 nodes ☀ 87% ◂ Pavla: water ok at the north hut. ◂ Node 7: SNR 9.5 dB EU_868 · LongFast · 3.98V ⌁ 01 Off-grid mesh messaging Nodes form a decentralized LoRa mesh. Messages hop node to node without internet, SIM cards or a mobile network. Board support and channel settings: see the official docs CHECK UPSTREAM. ▤ 02 Low-power E-Ink display E-Ink keeps the last screen visible with zero power draw, so a battery node can show messages and node info for weeks. Pin configs are defined upstream in the firmware repository. ✓ 03 Verifiable firmware Every release ships a manifest with SHA-256 hashes, signed with post-quantum ML-DSA-65 (FIPS 204) plus Ed25519. A valid signature proves the release is authentic from its publisher; it is not an endorsement by any authority. ☀ 04 Runs on sunlight Today's small solar panels easily power a node off-grid. A 2–6 W panel and one 18650 cell keep it running through nights and cloudy days. → ⚒ 05 Delivered assembled, open to build Your node arrives ready to use: plug in the solar panel and mount it. Schematics, pinout and parts list are open if you'd rather build your own. → ⠿ 06 Accessible for deaf and blind people Register for add-ons such as a Braille keyboard or a haptic skin band. They are open source too, so you can also build them yourself. → Verify a firmware file Build the firmware yourself How trust works here The Verify page checks the SHA-256 hash of your .bin against the manifest and verifies the manifest's ML-DSA-65 and Ed25519 signatures against the publisher public key, all locally in your browser. You then compare the shown key fingerprint with one published through a second channel (the GitHub repo or a printed card). Details on the Security page. Upstream sources of truth: the Meshtastic firmware repository and meshtastic.org. Anything that could change upstream (board lists, build targets, flashing steps) is marked CHECK UPSTREAM. How questions work here You can ask the central authority anything, in English, Czech or Polish. Each question is translated automatically into all three languages and published, together with the official answer, in a read-only channel. Users cannot message each other on this site; there are no comment threads. That keeps answers authoritative and the channel free of noise. Ask a question → Disclaimer: this is an unofficial community build and documentation site. It is not affiliated with, endorsed by, or connected to the Meshtastic project. Use any firmware at your own risk. LoRa radio use is regulated: frequency bands, power limits and licensing rules vary by country. Check the rules for your location before transmitting, for example in the official Meshtastic documentation. no cookies · no tracking · no third-party requests · verification runs locally in your browser · source on GitHub · hardware CERN-OHL-S-2.0 · firmware GPL-3.0",
+  "sections": [
+    {
+      "y": 97,
+      "height": 1729,
+      "tag": "main",
+      "id": "main",
+      "heading": "A solar-powered mesh node you can build at home.",
+      "text": "OPEN HARDWARE · OFF-GRID · ESP32-S3 + E-INK A solar-powered mesh node you can build at home. An open-hardware LoRa node running Meshtastic with an E-Ink screen. Every household receives one fully assembled from the state, so soldering is optional: the schematics are open for anyo"
+    },
+    {
+      "y": 97,
+      "height": 525,
+      "tag": "section",
+      "heading": "A solar-powered mesh node you can build at home.",
+      "text": "OPEN HARDWARE · OFF-GRID · ESP32-S3 + E-INK A solar-powered mesh node you can build at home. An open-hardware LoRa node running Meshtastic with an E-Ink screen. Every household receives one fully assembled from the state, so soldering is optional: the schematics are open for anyo"
+    },
+    {
+      "y": 646,
+      "height": 763,
+      "tag": "div",
+      "heading": "Off-grid mesh messaging",
+      "text": "⌁ 01 Off-grid mesh messaging Nodes form a decentralized LoRa mesh. Messages hop node to node without internet, SIM cards or a mobile network. Board support and channel settings: see the official docs CHECK UPSTREAM. ▤ 02 Low-power E-Ink display E-Ink keeps the last screen visible"
+    },
+    {
+      "y": 1481,
+      "height": 345,
+      "tag": "div",
+      "heading": "How trust works here",
+      "text": "How trust works here The Verify page checks the SHA-256 hash of your .bin against the manifest and verifies the manifest's ML-DSA-65 and Ed25519 signatures against the publisher public key, all locally in your browser. You then compare the shown key fingerprint with one published"
+    },
+    {
+      "y": 1826,
+      "height": 239,
+      "tag": "footer",
+      "text": "Disclaimer: this is an unofficial community build and documentation site. It is not affiliated with, endorsed by, or connected to the Meshtastic project. Use any firmware at your own risk. LoRa radio use is regulated: frequency bands, power limits and licensing rules vary by coun"
+    }
+  ],
+  "httpStatus": 200,
+  "fullHeight": 2065,
+  "fullHeightUncapped": 2065
+}
