@@ -40,4 +40,4 @@ npm run build                     # static site in dist/, deploy anywhere
 
 ## Reuse in another Lovable / React project
 
-Copy `skills/integrate-showcase/` into the target repo's `.claude/skills/` (or `~/.claude/skills/`), then ask Claude Code: *"add the CBD showcase gallery to this app"*. See [INTEGRATION.md](INTEGRATION.md) for the manual steps.
+Copy `skills/integrate-showcase/` into the target repo's `.claude/skills/` (or `~/.claude/skills/`), then ask Claude Code: *"add the CBD showcase gallery to this app"*. See [lovable/README.md](lovable/README.md) for the Lovable steps and [INTEGRATION.md](INTEGRATION.md) for the manual steps.

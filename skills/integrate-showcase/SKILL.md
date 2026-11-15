@@ -36,6 +36,8 @@ If the target already has its own project data, keep it. Copy only the screensho
 
 ## 4. Match the design tokens
 
+For Lovable (Tailwind v3) use the ready-made files in `$SRC/lovable/`: copy `showcase.css` to `src/showcase.css` and import it from `src/index.css`, merge `tailwind.v3.snippet.js` into `tailwind.config`, and paste `KNOWLEDGE.md` into the project's Knowledge (tell the user to do this in Lovable's settings; it can't be set from code). Details below apply to any other setup.
+
 The components use these Tailwind classes. Make sure each resolves in the target:
 
 - Colors: `cbd-ink`, `cbd-paper`, `cbd-neutral` (#f0ebe2), `cbd-blue`, `cbd-yellow`, `cbd-green`, plus `background`, `foreground`, `muted-foreground`, `border`
