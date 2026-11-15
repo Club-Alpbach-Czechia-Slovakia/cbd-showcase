@@ -1,8 +1,8 @@
 /** "—— OUTCOMES" style eyebrow used across crossborderdialogue.eu */
 export function SectionLabel({ children, tone = "blue" }: { children: React.ReactNode; tone?: "blue" | "yellow" }) {
-  const color = tone === "yellow" ? "text-cbd-yellow" : "text-cbd-blue";
+  const color = tone === "yellow" ? "text-[#ffcd00]" : "text-[#145c9e]";
   return (
-    <p className={`flex items-center gap-3 font-mono text-xs font-medium uppercase tracking-[0.2em] ${color}`}>
+    <p className={`flex items-center gap-3 font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-xs font-medium uppercase tracking-[0.2em] ${color}`}>
       <span className="h-px w-8 bg-current" aria-hidden />
       {children}
     </p>
@@ -12,7 +12,7 @@ export function SectionLabel({ children, tone = "blue" }: { children: React.Reac
 /** Yellow category tag (as on the outcomes cards). */
 export function CategoryTag({ children }: { children: React.ReactNode }) {
   return (
-    <span className="inline-block bg-cbd-yellow px-3 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-cbd-ink">
+    <span className="inline-block bg-[#ffcd00] px-3 py-1.5 font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] font-medium uppercase tracking-[0.15em] text-[#14110f]">
       {children}
     </span>
   );
@@ -21,8 +21,8 @@ export function CategoryTag({ children }: { children: React.ReactNode }) {
 /** Dark "● OPEN LIVE" badge laid over previews. */
 export function LiveBadge() {
   return (
-    <span className="inline-flex items-center gap-2 bg-cbd-ink/85 px-3 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.15em] text-cbd-paper backdrop-blur-sm">
-      <span className="size-1.5 rounded-full bg-cbd-green" aria-hidden />
+    <span className="inline-flex items-center gap-2 bg-[#14110f]/85 px-3 py-1.5 font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] font-medium uppercase tracking-[0.15em] text-[#faf8f4] backdrop-blur-sm">
+      <span className="h-1.5 w-1.5 rounded-full bg-[#27ae60]" aria-hidden />
       Open live
     </span>
   );

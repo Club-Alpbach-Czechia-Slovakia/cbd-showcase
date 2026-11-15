@@ -71,7 +71,7 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
         <label className="relative block">
           <span className="sr-only">Search projects</span>
           <svg
-            className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-cbd-ink/45"
+            className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#14110f]/45"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -86,7 +86,7 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search projects…"
-            className="w-full border border-cbd-ink/15 bg-white py-3 pl-11 pr-4 text-[15px] placeholder:text-cbd-ink/40 focus:border-cbd-blue focus:outline-none"
+            className="w-full border border-[#14110f]/15 bg-white py-3 pl-11 pr-4 text-[15px] placeholder:text-[#14110f]/40 focus:border-[#145c9e] focus:outline-none"
           />
         </label>
         {categories.length > 1 && (
@@ -99,10 +99,10 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
                   type="button"
                   onClick={() => setActive(label)}
                   aria-pressed={on}
-                  className={`border px-3.5 py-2 font-mono text-[11px] font-medium uppercase tracking-[0.18em] transition-colors ${
+                  className={`border px-3.5 py-2 font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] font-medium uppercase tracking-[0.18em] transition-colors ${
                     on
-                      ? "border-cbd-ink bg-cbd-ink text-cbd-paper"
-                      : "border-cbd-ink/15 text-cbd-ink/70 hover:border-cbd-ink hover:text-cbd-ink"
+                      ? "border-[#14110f] bg-[#14110f] text-[#faf8f4]"
+                      : "border-[#14110f]/15 text-[#14110f]/70 hover:border-[#14110f] hover:text-[#14110f]"
                   }`}
                 >
                   {label}
@@ -114,12 +114,12 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
       </div>
 
       <div className="mt-10 flex items-center justify-between gap-4">
-        <p className="font-mono text-xs uppercase tracking-[0.18em] text-cbd-ink/45">
+        <p className="font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-xs uppercase tracking-[0.18em] text-[#14110f]/45">
           Showing {filtered.length} of {visible.length} {visible.length === 1 ? "project" : "projects"}
         </p>
         <div className="hidden sm:flex items-center gap-3" role="radiogroup" aria-label="Layout">
-          <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-cbd-ink/45">View</span>
-          <div className="flex border border-cbd-ink/15">
+          <span className="font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] uppercase tracking-[0.18em] text-[#14110f]/45">View</span>
+          <div className="flex border border-[#14110f]/15">
             {LAYOUTS.map((l) => (
               <button
                 key={l.id}
@@ -130,7 +130,7 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
                 title={l.label}
                 onClick={() => setLayout(l.id)}
                 className={`grid size-9 place-items-center transition-colors ${
-                  layout === l.id ? "bg-cbd-ink text-cbd-paper" : "text-cbd-ink/55 hover:text-cbd-ink"
+                  layout === l.id ? "bg-[#14110f] text-[#faf8f4]" : "text-[#14110f]/55 hover:text-[#14110f]"
                 }`}
               >
                 {l.icon}
@@ -160,7 +160,7 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
           ))}
         </div>
       ) : (
-        <p className="mt-16 text-lg text-cbd-ink/55">No projects match your search.</p>
+        <p className="mt-16 text-lg text-[#14110f]/55">No projects match your search.</p>
       )}
 
       <ProjectModal project={open} previewBase={previewBase} onClose={() => setOpen(null)} />

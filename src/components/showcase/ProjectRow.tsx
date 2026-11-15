@@ -50,7 +50,7 @@ export function ProjectRow({ project, index, previewBase, onOpen, layout = "list
         type="button"
         onClick={() => onOpen(project)}
         aria-label={`Take a closer look at ${project.title}`}
-        className={`relative block min-w-0 text-left cursor-zoom-in ${grid ? "" : "lg:col-span-7"} focus:outline-none focus-visible:ring-2 focus-visible:ring-cbd-blue focus-visible:ring-offset-4 ${
+        className={`relative block min-w-0 text-left cursor-zoom-in ${grid ? "" : "lg:col-span-7"} focus:outline-none focus-visible:ring-2 focus-visible:ring-[#145c9e] focus-visible:ring-offset-4 ${
           flip ? "lg:order-2" : ""
         }`}
       >
@@ -78,35 +78,35 @@ export function ProjectRow({ project, index, previewBase, onOpen, layout = "list
 
       <div className={`min-w-0 ${grid ? "" : "lg:col-span-5"} ${flip ? "lg:order-1" : ""}`}>
         <div className="flex items-center gap-4">
-          <span className="font-mono text-sm text-cbd-ink/40 tabular-nums">{number}</span>
-          <span className="h-px flex-1 max-w-16 bg-cbd-ink/15" aria-hidden />
+          <span className="font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-sm text-[#14110f]/40 tabular-nums">{number}</span>
+          <span className="h-px flex-1 max-w-16 bg-[#14110f]/15" aria-hidden />
           <CategoryTag>{project.category}</CategoryTag>
         </div>
         <h3
-          className={`font-display font-extrabold leading-[1.02] tracking-tight text-cbd-ink ${
+          className={`font-['Bricolage_Grotesque',ui-sans-serif,system-ui,sans-serif] font-extrabold leading-[1.02] tracking-tight text-[#14110f] ${
             grid ? "mt-5 text-3xl xl:text-4xl" : "mt-6 text-4xl xl:text-5xl"
           }`}
         >
           {project.title}
         </h3>
-        {project.tagline && <p className="mt-3 text-lg font-medium text-cbd-blue">{project.tagline}</p>}
-        <p className={`mt-4 leading-relaxed text-cbd-ink/75 ${grid ? "line-clamp-3" : "line-clamp-4"}`}>{project.description}</p>
+        {project.tagline && <p className="mt-3 text-lg font-medium text-[#145c9e]">{project.tagline}</p>}
+        <p className={`mt-4 leading-relaxed text-[#14110f]/75 ${grid ? "line-clamp-3" : "line-clamp-4"}`}>{project.description}</p>
         {project.team && (
-          <p className="mt-4 font-mono text-xs uppercase tracking-[0.15em] text-cbd-ink/50">Team · {project.team}</p>
+          <p className="mt-4 font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-xs uppercase tracking-[0.15em] text-[#14110f]/50">Team · {project.team}</p>
         )}
         <div className={`flex flex-wrap gap-3 ${grid ? "mt-6" : "mt-8"}`}>
           <a
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-cbd btn-cbd-primary px-6 py-3.5 text-sm font-bold"
+            className="inline-flex items-center justify-center gap-2 group/btn font-semibold transition active:translate-y-px bg-[#ffcd00] text-[#14110f] hover:brightness-105 px-6 py-3.5 text-sm font-bold"
           >
-            Open live <span className="btn-cbd-arrow">→</span>
+            Open live <span className="inline-block transition-transform group-hover/btn:translate-x-1">→</span>
           </a>
           <button
             type="button"
             onClick={() => onOpen(project)}
-            className="btn-cbd btn-cbd-secondary px-6 py-3.5 text-sm font-bold"
+            className="inline-flex items-center justify-center gap-2 group/btn font-semibold transition active:translate-y-px border-2 border-[#145c9e] text-[#145c9e] hover:bg-[#145c9e] hover:text-[#faf8f4] px-6 py-3.5 text-sm font-bold"
           >
             Take a closer look
           </button>

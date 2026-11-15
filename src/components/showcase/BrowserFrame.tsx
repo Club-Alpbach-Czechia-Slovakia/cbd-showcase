@@ -14,18 +14,18 @@ export function BrowserFrame({ url, children, tone = "light", className = "" }: 
   return (
     <div
       className={`overflow-hidden border ${
-        dark ? "border-white/15 bg-[#1f1b18] shadow-2xl shadow-black/40" : "border-cbd-ink/10 bg-white shadow-sm"
+        dark ? "border-white/15 bg-[#1f1b18] shadow-2xl shadow-black/40" : "border-[#14110f]/10 bg-white shadow-sm"
       } ${className}`}
     >
-      <div className={`flex items-center gap-3 px-3 h-8 border-b ${dark ? "border-white/10" : "border-cbd-ink/10 bg-cbd-neutral/60"}`}>
+      <div className={`flex items-center gap-3 px-3 h-8 border-b ${dark ? "border-white/10" : "border-[#14110f]/10 bg-[#f0ebe2]/60"}`}>
         <div className="flex gap-1.5 shrink-0" aria-hidden>
           <span className="size-2.5 rounded-full bg-[#ff5f57]" />
           <span className="size-2.5 rounded-full bg-[#febc2e]" />
           <span className="size-2.5 rounded-full bg-[#28c840]" />
         </div>
         <div
-          className={`min-w-0 flex-1 truncate text-center font-mono text-[11px] px-2 py-0.5 ${
-            dark ? "bg-white/10 text-white/70" : "bg-white text-cbd-ink/60 border border-cbd-ink/10"
+          className={`min-w-0 flex-1 truncate text-center font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] px-2 py-0.5 ${
+            dark ? "bg-white/10 text-white/70" : "bg-white text-[#14110f]/60 border border-[#14110f]/10"
           }`}
         >
           {hostname(url)}

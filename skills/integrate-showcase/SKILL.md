@@ -34,23 +34,13 @@ Read `$SRC/INTEGRATION.md` and `$SRC/src/styles/cbd-tokens.css` for anything new
 
 If the target already has its own project data, keep it. Copy only the screenshots it needs and use its own JSON in the `Project` shape (`slug, url, title, tagline?, description, category, team?, highlight?, fullHeight?, featured?, hidden?`). `slug` must match a folder under `previews/` containing `hero.webp`, `full.webp`, `mobile.webp`, `highlight.webp`.
 
-## 4. Match the design tokens
+## 4. Styling (usually nothing to do)
 
-For Lovable (Tailwind v3) use the ready-made files in `$SRC/lovable/`: copy `showcase.css` to `src/showcase.css` and import it from `src/index.css`, merge `tailwind.v3.snippet.js` into `tailwind.config`, and paste `KNOWLEDGE.md` into the project's Knowledge (tell the user to do this in Lovable's settings; it can't be set from code). Details below apply to any other setup.
+The components are zero-config: colours, fonts, buttons and the dialog backdrop are inline Tailwind utilities (arbitrary values like `bg-[#14110f]/15`). No tokens, global CSS or `tailwind.config` edits are needed. Requirements: Tailwind 3.4+ (Lovable's default) or v4.
 
-The components use these Tailwind classes. Make sure each resolves in the target:
-
-- Colors: `cbd-ink`, `cbd-paper`, `cbd-neutral` (#f0ebe2), `cbd-blue`, `cbd-yellow`, `cbd-green`, plus `background`, `foreground`, `muted-foreground`, `border`
-- Fonts: `font-display` (Bricolage Grotesque), `font-sans`, `font-mono` (IBM Plex Mono)
-- Component classes: `btn-cbd`, `btn-cbd-primary`, `btn-cbd-secondary`, `btn-cbd-arrow`
-- `dialog::backdrop` styling (blurred dark backdrop)
-
-Only add what is missing, from `cbd-tokens.css`:
-- Tailwind v4: add the colors/fonts to `@theme`.
-- Tailwind v3: add the same values under `theme.extend.colors` / `fontFamily` in `tailwind.config`.
-- Keep `.btn-cbd*` inside `@layer components`. Unlayered, they override utilities like `hidden` / `md:flex` on buttons.
-- Load the Google fonts (Bricolage Grotesque, Inter, IBM Plex Mono) in `index.html` if the target lacks them.
-- If the target has a different brand, remap the `cbd-*` tokens to its palette instead of editing components.
+- Optional: load Bricolage Grotesque and IBM Plex Mono in `index.html`; otherwise system fonts are used.
+- To rebrand, change the hex values in the components (search `#14110f`, `#faf8f4`, `#f0ebe2`, `#145c9e`, `#ffcd00`, `#27ae60`).
+- For Lovable, tell the user to paste `$SRC/lovable/KNOWLEDGE.md` into Project settings → Knowledge (it can't be set from code).
 
 ## 5. Wire it into the page
 

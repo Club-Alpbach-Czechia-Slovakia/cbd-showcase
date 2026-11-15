@@ -42,12 +42,12 @@ export function ProjectModal({ project, previewBase, onClose }: Props) {
       ref={dialogRef}
       onClose={onClose}
       onClick={(e) => e.target === dialogRef.current && onClose()}
-      className="m-auto w-[min(1200px,calc(100vw-2rem))] max-h-[calc(100dvh-2rem)] p-0 bg-cbd-paper text-cbd-ink overflow-hidden"
+      className="m-auto w-[min(1200px,calc(100vw-2rem))] max-h-[calc(100dvh-2rem)] p-0 bg-[#faf8f4] text-[#14110f] overflow-hidden backdrop:bg-[#14110f]/80 backdrop:backdrop-blur-sm"
     >
       {project && (
         <div className="grid lg:grid-cols-[1.55fr_1fr] max-h-[calc(100dvh-2rem)]">
-          <div className="bg-cbd-neutral p-4 sm:p-6 flex flex-col min-h-0">
-            <div className="mb-3 flex items-center gap-1 font-mono text-[11px] font-medium uppercase tracking-[0.18em]" role="tablist">
+          <div className="bg-[#f0ebe2] p-4 sm:p-6 flex flex-col min-h-0">
+            <div className="mb-3 flex items-center gap-1 font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] font-medium uppercase tracking-[0.18em]" role="tablist">
               {(["desktop", "mobile"] as const).map((v) => (
                 <button
                   key={v}
@@ -56,13 +56,13 @@ export function ProjectModal({ project, previewBase, onClose }: Props) {
                   disabled={v === "mobile" && mobileMissing}
                   onClick={() => setView(v)}
                   className={`px-3 py-1.5 border transition-colors disabled:opacity-40 ${
-                    view === v ? "bg-cbd-ink text-cbd-paper border-cbd-ink" : "border-cbd-ink/20 hover:border-cbd-ink"
+                    view === v ? "bg-[#14110f] text-[#faf8f4] border-[#14110f]" : "border-[#14110f]/20 hover:border-[#14110f]"
                   }`}
                 >
                   {v}
                 </button>
               ))}
-              <span className="ml-auto normal-case tracking-normal text-cbd-ink/50 hidden sm:inline">Scroll to explore</span>
+              <span className="ml-auto normal-case tracking-normal text-[#14110f]/50 hidden sm:inline">Scroll to explore</span>
             </div>
 
             {view === "desktop" ? (
@@ -77,7 +77,7 @@ export function ProjectModal({ project, previewBase, onClose }: Props) {
                 </div>
               </BrowserFrame>
             ) : (
-              <div className="mx-auto w-[260px] sm:w-[290px] rounded-[2.2rem] border-[10px] border-cbd-ink bg-cbd-ink shadow-xl">
+              <div className="mx-auto w-[260px] sm:w-[290px] rounded-[2.2rem] border-[10px] border-[#14110f] bg-[#14110f] shadow-xl">
                 <div className="overflow-y-auto h-[52vh] lg:h-[66vh] rounded-[1.5rem] bg-white overscroll-contain">
                   <img
                     src={`${previewBase}/${project.slug}/mobile.webp`}
@@ -97,7 +97,7 @@ export function ProjectModal({ project, previewBase, onClose }: Props) {
             <button
               type="button"
               onClick={onClose}
-              className="absolute right-4 top-4 size-9 grid place-items-center text-xl hover:bg-cbd-ink hover:text-cbd-paper transition-colors"
+              className="absolute right-4 top-4 size-9 grid place-items-center text-xl hover:bg-[#14110f] hover:text-[#faf8f4] transition-colors"
               aria-label="Close"
             >
               ×
@@ -105,12 +105,12 @@ export function ProjectModal({ project, previewBase, onClose }: Props) {
             <div>
               <CategoryTag>{project.category}</CategoryTag>
             </div>
-            <h2 className="mt-4 pr-8 font-display font-extrabold text-4xl leading-[0.95] tracking-tight">{project.title}</h2>
-            {project.tagline && <p className="mt-3 text-lg font-medium text-cbd-blue">{project.tagline}</p>}
-            <p className="mt-5 leading-relaxed text-cbd-ink/80">{project.description}</p>
+            <h2 className="mt-4 pr-8 font-['Bricolage_Grotesque',ui-sans-serif,system-ui,sans-serif] font-extrabold text-4xl leading-[0.95] tracking-tight">{project.title}</h2>
+            {project.tagline && <p className="mt-3 text-lg font-medium text-[#145c9e]">{project.tagline}</p>}
+            <p className="mt-5 leading-relaxed text-[#14110f]/80">{project.description}</p>
             {project.team && (
-              <dl className="mt-6 border-t border-cbd-ink/10 pt-4 font-mono text-xs">
-                <dt className="uppercase tracking-wider text-cbd-ink/50">Team</dt>
+              <dl className="mt-6 border-t border-[#14110f]/10 pt-4 font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-xs">
+                <dt className="uppercase tracking-wider text-[#14110f]/50">Team</dt>
                 <dd className="mt-1 text-sm">{project.team}</dd>
               </dl>
             )}
@@ -119,9 +119,9 @@ export function ProjectModal({ project, previewBase, onClose }: Props) {
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-cbd btn-cbd-primary px-6 py-3.5 text-sm font-bold w-full sm:w-auto"
+                className="inline-flex items-center justify-center gap-2 group/btn font-semibold transition active:translate-y-px bg-[#ffcd00] text-[#14110f] hover:brightness-105 px-6 py-3.5 text-sm font-bold w-full sm:w-auto"
               >
-                Open the live site <span className="btn-cbd-arrow">→</span>
+                Open the live site <span className="inline-block transition-transform group-hover/btn:translate-x-1">→</span>
               </a>
             </div>
           </div>

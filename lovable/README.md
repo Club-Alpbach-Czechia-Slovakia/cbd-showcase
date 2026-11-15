@@ -1,23 +1,20 @@
 # Using the gallery in Lovable
 
-Lovable cannot clone this repo, so the files must reach its GitHub repo first. Lovable syncs two-way with GitHub.
+The components are **zero-config**: all colours, fonts, button styles and the dialog backdrop are inline Tailwind utilities (arbitrary values such as `bg-[#14110f]/15`). No tailwind.config changes, no global CSS, no extra npm packages, no router, no shadcn. Verified to compile on Tailwind v3.4 (Lovable's default) and v4.
 
-## 1. Copy files into the Lovable repo (clone it, push after)
+Lovable cannot clone this repo, so the files must reach its GitHub repo first (Lovable syncs two-way with GitHub).
+
+## 1. Copy files into the Lovable repo, then push
 
 | From this repo | To the Lovable repo |
 | --- | --- |
 | `src/components/showcase/` | `src/components/showcase/` |
 | `src/data/projects.json` | `src/data/showcase-projects.json` |
 | `public/previews/` | `public/previews/` |
-| `lovable/showcase.css` | `src/showcase.css` |
 
-## 2. Add the styles (about 2 minutes)
+Optional: load the fonts in `index.html` (Bricolage Grotesque, IBM Plex Mono). Without them the components fall back to system fonts.
 
-1. In `src/index.css`, after the `@tailwind` lines, add `@import "./showcase.css";` (imports must come first in some setups; if the build complains, paste the file's contents at the end instead).
-2. Merge `lovable/tailwind.v3.snippet.js` into `tailwind.config.ts` under `theme.extend`. On Tailwind v4, use `src/styles/cbd-tokens.css` (`@theme`) instead.
-3. Add the Google fonts to `index.html` if missing: Bricolage Grotesque, Inter, IBM Plex Mono.
-
-## 3. Tell Lovable
+## 2. Tell Lovable
 
 1. Paste `lovable/KNOWLEDGE.md` into **Project settings → Knowledge**.
 2. Send this chat prompt:
@@ -26,6 +23,8 @@ Lovable cannot clone this repo, so the files must reach its GitHub repo first. L
 
 If you have Claude Code, the `skills/integrate-showcase` skill automates all of the above.
 
-## Compatibility
-
-Checked: the components use no Tailwind v4-only utilities, only relative imports, plain `<dialog>`, and no extra packages, so they run on Lovable's default stack (Vite + React + Tailwind v3). Not yet run inside a live Lovable project.
+## Compatibility notes
+- Needs Tailwind 3.4+ (uses `group/btn`, `backdrop:` and arbitrary values). Lovable's default is 3.4.
+- Relative imports only, so the `@/` alias is needed only in your own page.
+- Native `<dialog>` modal; layout choice is saved in `localStorage`.
+- Not yet run inside a live Lovable project.

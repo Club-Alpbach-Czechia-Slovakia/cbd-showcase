@@ -1,6 +1,6 @@
 # Using the gallery in the crossborderdialogue.eu Lovable app
 
-The components in `src/components/showcase/` only need React and Tailwind. They use the same class names the Lovable site already has (`text-cbd-blue`, `bg-cbd-yellow`, `btn-cbd btn-cbd-primary`, `font-display`, `font-mono`, …). They need no router, no extra npm packages and no shadcn components; the modal is a native `<dialog>`.
+The components in `src/components/showcase/` only need React and Tailwind. They are self-contained: colours, fonts and buttons are inline Tailwind utilities, so no config or global CSS is needed. They need no router, no extra npm packages and no shadcn components; the modal is a native `<dialog>`.
 
 ## Files to copy
 
@@ -10,9 +10,7 @@ The components in `src/components/showcase/` only need React and Tailwind. They 
 | `src/data/projects.json` | `src/data/showcase-projects.json` |
 | `public/previews/` (whole folder) | `public/previews/` |
 
-Check that the Lovable app's CSS defines `--cbd-neutral` (`#f0ebe2`). It is the only token the components use that you might not have; the others are already there. If something looks off, compare it with `src/styles/cbd-tokens.css`.
-
-Keep `.btn-cbd*` inside `@layer components`, which is where it lives in this repo. If it is unlayered, it overrides Tailwind utilities such as `hidden` / `md:flex` on buttons.
+No design tokens or CSS need to be added. Requires Tailwind 3.4+ or v4. See [lovable/README.md](lovable/README.md) for the Lovable-specific steps.
 
 ## Use on the Outcomes page
 

@@ -21,7 +21,7 @@ export function ShowcaseHero({
   label = "Hackathon outcomes",
   headline = (
     <>
-      Built across borders. <span className="text-cbd-yellow">Live</span> on the web.
+      Built across borders. <span className="text-[#ffcd00]">Live</span> on the web.
     </>
   ),
   intro = "Every team left the hackathon with a working website. Here they all are: tap one to look around, or open it live.",
@@ -58,7 +58,7 @@ export function ShowcaseHero({
   };
 
   return (
-    <section className="relative overflow-hidden bg-cbd-ink text-cbd-paper lg:min-h-[calc(100svh-5rem)] lg:flex lg:items-center">
+    <section className="relative overflow-hidden bg-[#14110f] text-[#faf8f4] lg:min-h-[calc(100svh-5rem)] lg:flex lg:items-center">
       {/* subtle grid texture */}
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.07]"
@@ -73,30 +73,30 @@ export function ShowcaseHero({
       <div className="relative w-full mx-auto max-w-7xl px-6 lg:px-10 py-20 md:py-28 grid gap-14 lg:gap-16 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-5">
           <SectionLabel tone="yellow">{label}</SectionLabel>
-          <h1 className="mt-6 font-display font-extrabold leading-[0.95] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
+          <h1 className="mt-6 font-['Bricolage_Grotesque',ui-sans-serif,system-ui,sans-serif] font-extrabold leading-[0.95] tracking-tight text-4xl sm:text-5xl md:text-6xl lg:text-7xl">
             {headline}
           </h1>
-          <p className="mt-8 max-w-xl text-lg text-cbd-paper/80 leading-relaxed">{intro}</p>
+          <p className="mt-8 max-w-xl text-lg text-[#faf8f4]/80 leading-relaxed">{intro}</p>
           <div className="mt-10 flex flex-wrap gap-3">
-            <a href={galleryHref} className="btn-cbd btn-cbd-primary px-6 py-3.5 text-sm font-bold">
-              Explore {visible.length === 1 ? "the project" : `all ${visible.length} projects`} <span className="btn-cbd-arrow">→</span>
+            <a href={galleryHref} className="inline-flex items-center justify-center gap-2 group/btn font-semibold transition active:translate-y-px bg-[#ffcd00] text-[#14110f] hover:brightness-105 px-6 py-3.5 text-sm font-bold">
+              Explore {visible.length === 1 ? "the project" : `all ${visible.length} projects`} <span className="inline-block transition-transform group-hover/btn:translate-x-1">→</span>
             </a>
           </div>
 
           {current && (
             <div key={current.slug} className="hidden lg:block mt-14 border-t border-white/15 pt-8">
-              <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-cbd-paper/50">
+              <p className="font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] font-medium uppercase tracking-[0.18em] text-[#faf8f4]/50">
                 Now showing · {current.category}
               </p>
-              <p className="mt-2 font-display font-extrabold text-3xl tracking-tight">{current.title}</p>
-              {current.tagline && <p className="mt-1 text-cbd-paper/75">{current.tagline}</p>}
+              <p className="mt-2 font-['Bricolage_Grotesque',ui-sans-serif,system-ui,sans-serif] font-extrabold text-3xl tracking-tight">{current.title}</p>
+              {current.tagline && <p className="mt-1 text-[#faf8f4]/75">{current.tagline}</p>}
               <a
                 href={current.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-cbd mt-4 text-sm text-cbd-yellow hover:text-cbd-paper"
+                className="inline-flex items-center gap-2 group/btn font-semibold transition mt-4 text-sm text-[#ffcd00] hover:text-[#faf8f4]"
               >
-                Open live <span className="btn-cbd-arrow">→</span>
+                Open live <span className="inline-block transition-transform group-hover/btn:translate-x-1">→</span>
               </a>
             </div>
           )}
@@ -142,7 +142,7 @@ export function ShowcaseHero({
                   >
                     <span
                       className={`block h-1 transition-colors ${
-                        i === index ? "bg-cbd-yellow" : "bg-white/20 group-hover:bg-white/50"
+                        i === index ? "bg-[#ffcd00]" : "bg-white/20 group-hover:bg-white/50"
                       }`}
                     />
                   </button>
@@ -157,11 +157,11 @@ export function ShowcaseHero({
               className="lg:hidden mt-4 flex items-baseline justify-between gap-4"
             >
               <span className="min-w-0">
-                <span className="block font-mono text-[11px] uppercase tracking-wider text-cbd-paper/50">{current.category}</span>
-                <span className="block font-display font-extrabold text-2xl tracking-tight">{current.title}</span>
-                {current.tagline && <span className="block text-sm text-cbd-paper/70">{current.tagline}</span>}
+                <span className="block font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] uppercase tracking-wider text-[#faf8f4]/50">{current.category}</span>
+                <span className="block font-['Bricolage_Grotesque',ui-sans-serif,system-ui,sans-serif] font-extrabold text-2xl tracking-tight">{current.title}</span>
+                {current.tagline && <span className="block text-sm text-[#faf8f4]/70">{current.tagline}</span>}
               </span>
-              <span className="shrink-0 text-sm font-semibold text-cbd-yellow">Open live →</span>
+              <span className="shrink-0 text-sm font-semibold text-[#ffcd00]">Open live →</span>
             </a>
           </div>
         )}

@@ -8,6 +8,5 @@ Rules:
   `<ProjectGallery projects={projects as Project[]} previewBase="/previews" />`
 - Projects are only added or changed in `src/data/showcase-projects.json` (fields: slug, url, title, tagline ≤ 60 chars, description, category, team, highlight {y,height}, featured, hidden). `slug` must equal a folder name under `public/previews/`.
 - Set `"hidden": true` to hide a project instead of deleting it.
-- Styling depends on Tailwind colors `cbd-ink`, `cbd-paper`, `cbd-neutral`, `cbd-blue`, `cbd-yellow`, `cbd-green` (hex values, so `/opacity` works), fonts `font-display` / `font-mono`, and the `.btn-cbd*` classes from `src/showcase.css`. Do not rename or remove them.
-- Keep `.btn-cbd*` inside `@layer components`.
+- The components are self-contained: colours, fonts and button styles are inline Tailwind utilities. No tailwind.config or global CSS changes are needed, so do not add any for the gallery. Requires Tailwind 3.4+.
 - Do not add npm packages for the gallery. It needs only React and Tailwind.

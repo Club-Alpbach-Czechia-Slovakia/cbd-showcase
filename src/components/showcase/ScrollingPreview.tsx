@@ -87,11 +87,11 @@ export function ScrollingPreview({
   return (
     <div
       ref={boxRef}
-      className={`relative overflow-hidden bg-cbd-neutral ${className}`}
+      className={`relative overflow-hidden bg-[#f0ebe2] ${className}`}
       style={{ aspectRatio: aspect }}
     >
       {failed ? (
-        <div className="absolute inset-0 grid place-items-center p-6 text-center font-mono text-xs text-cbd-ink/50">
+        <div className="absolute inset-0 grid place-items-center p-6 text-center font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-xs text-[#14110f]/50">
           Preview not available yet
         </div>
       ) : (
