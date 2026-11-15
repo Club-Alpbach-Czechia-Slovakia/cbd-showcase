@@ -2,9 +2,10 @@ import { useEffect, useMemo, useState } from "react";
 import type { Project } from "./types";
 import { ProjectRow } from "./ProjectRow";
 import { ProjectModal } from "./ProjectModal";
+import { ShowcaseMotionStyles } from "./motion";
 
 type Layout = "list" | "grid";
-const LAYOUT_KEY = "cbd-showcase-layout";
+const LAYOUT_KEY = "cbd-showcase-layout-v2";
 
 const LAYOUTS: { id: Layout; label: string; icon: React.ReactNode }[] = [
   {
@@ -45,9 +46,9 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
   const [open, setOpen] = useState<Project | null>(null);
   const [layout, setLayout] = useState<Layout>(() => {
     try {
-      return localStorage.getItem(LAYOUT_KEY) === "grid" ? "grid" : "list";
+      return localStorage.getItem(LAYOUT_KEY) === "list" ? "list" : "grid";
     } catch {
-      return "list";
+      return "grid";
     }
   });
   useEffect(() => {
@@ -67,6 +68,7 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
 
   return (
     <div>
+      <ShowcaseMotionStyles />
       <div className="grid gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:items-start lg:gap-6">
         <label className="relative block">
           <span className="sr-only">Search projects</span>
@@ -117,7 +119,7 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
         <p className="font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-xs uppercase tracking-[0.18em] text-[#14110f]/45">
           Showing {filtered.length} of {visible.length} {visible.length === 1 ? "project" : "projects"}
         </p>
-        <div className="hidden sm:flex items-center gap-3" role="radiogroup" aria-label="Layout">
+        <div className="hidden lg:flex items-center gap-3" role="radiogroup" aria-label="Layout">
           <span className="font-['IBM_Plex_Mono',ui-monospace,SFMono-Regular,monospace] text-[11px] uppercase tracking-[0.18em] text-[#14110f]/45">View</span>
           <div className="flex border border-[#14110f]/15">
             {LAYOUTS.map((l) => (
@@ -144,7 +146,7 @@ export function ProjectGallery({ projects, previewBase = "/previews" }: Props) {
         <div
           className={
             layout === "grid"
-              ? "mt-12 lg:mt-16 grid grid-cols-1 gap-y-20 sm:grid-cols-2 sm:gap-x-10 lg:gap-x-16 lg:gap-y-24"
+              ? "mt-16 lg:mt-24 grid grid-cols-1 gap-y-24 lg:grid-cols-2 lg:gap-x-14 xl:gap-x-20 lg:gap-y-32"
               : "mt-12 lg:mt-16 space-y-24 lg:space-y-28"
           }
         >
