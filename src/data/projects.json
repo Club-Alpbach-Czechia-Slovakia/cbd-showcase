@@ -69,5 +69,19 @@
     },
     "fullHeight": 3374,
     "featured": false
+  },
+  {
+    "slug": "tavensaste",
+    "url": "https://tavensaste.macaly.app/",
+    "title": "Taven Saste Platform",
+    "tagline": "Inclusive crisis management for Roma communities",
+    "description": "A crisis and rights hub for Romani families in the Czech Republic, available in English, Czech and Romani. Users pick a phase (before, during or after a crisis) to get prioritised safety checklists, a plan based on their legal rights, free aid kits and nearby community matching for help. The site states that some contacts are placeholders awaiting verified local partner data.",
+    "category": "Uncategorized",
+    "highlight": {
+      "y": 763,
+      "height": 835
+    },
+    "fullHeight": 2120,
+    "featured": false
   }
 ]
