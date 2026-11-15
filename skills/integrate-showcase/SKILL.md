@@ -5,7 +5,7 @@ description: Add the Cross-Border Dialogue hackathon project gallery (auto-scrol
 
 # Integrate the CBD showcase gallery into a Lovable app
 
-Source of truth: https://github.com/PeterWolfframm/cbd-showcase (public, MIT).
+Source of truth: https://github.com/Club-Alpbach-Czechia-Slovakia/cbd-showcase (public, MIT).
 The components need only React + Tailwind (v3 or v4). No router, no extra npm packages, no shadcn; the modal is a native `<dialog>`.
 
 Work in the target Lovable repo (cloned from its connected GitHub repo). Do not restyle or rewrite the showcase components.
@@ -13,7 +13,7 @@ Work in the target Lovable repo (cloned from its connected GitHub repo). Do not 
 ## 1. Get the source
 
 ```bash
-SRC=$(mktemp -d) && git clone --depth 1 https://github.com/PeterWolfframm/cbd-showcase "$SRC"
+SRC=$(mktemp -d) && git clone --depth 1 https://github.com/Club-Alpbach-Czechia-Slovakia/cbd-showcase "$SRC"
 ```
 
 Read `$SRC/INTEGRATION.md` and `$SRC/src/styles/cbd-tokens.css` for anything newer than this skill.

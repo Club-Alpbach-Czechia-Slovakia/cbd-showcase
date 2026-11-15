@@ -5,7 +5,7 @@ description: Add one or more websites (hackathon projects) to the cbd-showcase g
 
 # Add websites to the showcase gallery
 
-This file is plain Markdown on purpose. Any agent that can **run shell commands** and **read/write files** can follow it (Claude Code, Codex, Cursor, Gemini CLI, Aider, OpenHands, a local model with tools, or a human). Run everything from the repo root of https://github.com/PeterWolfframm/cbd-showcase.
+This file is plain Markdown on purpose. Any agent that can **run shell commands** and **read/write files** can follow it (Claude Code, Codex, Cursor, Gemini CLI, Aider, OpenHands, a local model with tools, or a human). Run everything from the repo root of https://github.com/Club-Alpbach-Czechia-Slovakia/cbd-showcase.
 
 You do the judgement work (copy and highlight). Scripts do the rest. **Do not hand-edit screenshots or invent facts: use only what the capture output says.**
 
@@ -102,10 +102,12 @@ The site is hosted on GitHub Pages and **redeploys on every push to `main`** (`.
 git add scripts/urls.txt src/data/projects.json public/previews capture-output
 git commit -m "Add <slug(s)> to showcase"
 git push origin main
-gh run watch --exit-status   # optional: wait for the deploy to finish
+gh run watch "$(gh run list --limit 1 --json databaseId -q '.[0].databaseId')" --exit-status   # wait for deploy
 ```
 
-Live URL: https://peterwolfframm.github.io/cbd-showcase/
+If the repo is ever moved/renamed, check `git remote -v`, `gh api repos/<owner>/cbd-showcase/pages` (`html_url` is the real live URL) and update this file and AGENTS.md; the old URL then returns 404.
+
+Live URL: https://club-alpbach-czechia-slovakia.github.io/cbd-showcase/
 
 Only deploy sites that passed validation. Skip hidden/error-page sites (they stay out of the commit message but may be committed as `hidden`). If the push or workflow fails, show the user the error.
 
@@ -127,4 +129,4 @@ After steps 1-5, copy the changed `public/previews/<slug>/` folders and the new 
 
 ## Custom domain
 
-To serve the gallery on a subdomain: put the hostname (one line, e.g. `showcase.example.com`) in `public/CNAME`, add a DNS `CNAME` record from that subdomain to `peterwolfframm.github.io`, then run `gh api -X PUT repos/PeterWolfframm/cbd-showcase/pages -f cname=<hostname> -F https_enforced=true` after DNS resolves. The deploy workflow then builds with root paths, and GitHub redirects the old github.io URL to the new domain.
+To serve the gallery on a subdomain: put the hostname (one line, e.g. `showcase.example.com`) in `public/CNAME`, add a DNS `CNAME` record from that subdomain to `club-alpbach-czechia-slovakia.github.io`, then run `gh api -X PUT repos/Club-Alpbach-Czechia-Slovakia/cbd-showcase/pages -f cname=<hostname> -F https_enforced=true` after DNS resolves. The deploy workflow then builds with root paths, and GitHub redirects the old github.io URL to the new domain.
