@@ -10,7 +10,7 @@ A gallery of every hackathon project with auto-scrolling previews, styled like c
    npm run capture            # only new URLs; add -- --force to redo all, or -- --only <slug> for one
    ```
    This writes screenshots to `public/previews/<slug>/` (`hero`, `full`, `mobile`, `highlight` .webp) and the scraped text plus section positions to `capture-output/<slug>.json`. It also adds a **draft** entry to `src/data/projects.json`.
-3. Ask Claude Code: *"write the copy for the draft projects"*. It reads `capture-output/*.json` and the screenshots, then fills in the following fields and removes `draft`:
+3. Ask your LLM agent (see `skills/add-website/SKILL.md`): *"write the copy for the draft projects"*. It reads `capture-output/*.json` and the screenshots, then fills in the following fields and removes `draft`:
    - `title`
    - `tagline` (≤ 60 chars)
    - `description` (2–3 sentences)
@@ -37,6 +37,10 @@ npm run build                     # static site in dist/, deploy anywhere
 - Sites that answer with an HTTP error (for example password-protected ones) are flagged during capture. Their screenshots will show the error page.
 - The capture script dismisses cookie banners, hides the "Edit with Lovable" badge, forces scroll-reveal content to be visible and caps full-page screenshots at 9000px.
 - To put the gallery into the Lovable site, see [INTEGRATION.md](INTEGRATION.md).
+
+## Add websites with any LLM
+
+Give your agent (Claude Code, Codex, Cursor, Gemini CLI, …) the URLs and point it at [`skills/add-website/SKILL.md`](skills/add-website/SKILL.md) (also referenced from `AGENTS.md`). It captures, writes the copy and runs `npm run validate`.
 
 ## Reuse in another Lovable / React project
 
