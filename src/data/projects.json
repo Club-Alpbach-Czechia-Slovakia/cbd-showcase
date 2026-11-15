@@ -41,5 +41,19 @@
     },
     "fullHeight": 1084,
     "featured": false
+  },
+  {
+    "slug": "zdlmt9udmf0q0ucc93z5vne6",
+    "url": "https://zdlmt9udmf0q0ucc93z5vne6.macaly.app",
+    "title": "AI at School",
+    "tagline": "Learn with AI, think for yourself.",
+    "description": "We educate the whole school community in the proper use of artificial intelligence while developing and protecting students’ cognitive and creative skills.",
+    "category": "Uncategorized",
+    "highlight": {
+      "y": 57,
+      "height": 900
+    },
+    "fullHeight": 4394,
+    "featured": false
   }
 ]
