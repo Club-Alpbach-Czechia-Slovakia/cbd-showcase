@@ -7,10 +7,11 @@ const projects = (projectsData as Project[]).filter((p) => !p.hidden);
 const PREVIEW_BASE = `${import.meta.env.BASE_URL}previews`.replace(/\/+/g, "/");
 const CBD_URL = "https://crossborderdialogue.eu";
 
+// "Outcomes" is this page, so it stays here; the rest go to the main CBD site.
 const NAV = [
   { label: "About", href: `${CBD_URL}/#about` },
   { label: "Conferences", href: `${CBD_URL}/#conferences` },
-  { label: "Outcomes", href: `${CBD_URL}/outcomes` },
+  { label: "Outcomes", href: "#gallery" },
   { label: "Photos", href: `${CBD_URL}/photos` },
   { label: "Partners", href: `${CBD_URL}/#partners` },
 ];
@@ -18,7 +19,7 @@ const NAV = [
 const FOOTER_LINKS = [
   { label: "About", href: `${CBD_URL}/#about` },
   { label: "Conferences", href: `${CBD_URL}/#conferences` },
-  { label: "Outcomes", href: `${CBD_URL}/outcomes` },
+  { label: "Outcomes", href: "#gallery" },
   { label: "Team", href: `${CBD_URL}/team` },
   { label: "Photos", href: `${CBD_URL}/photos` },
   { label: "Partners", href: `${CBD_URL}/#partners` },
@@ -64,6 +65,7 @@ function Logo() {
 
 function Header() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
     onScroll();
@@ -93,8 +95,36 @@ function Header() {
           <a href={`${CBD_URL}/become-a-partner`} className="btn-cbd btn-cbd-secondary px-4 py-2 text-sm">Become a Partner</a>
           <a href={`${CBD_URL}/#join`} className="btn-cbd btn-cbd-primary px-4 py-2 text-sm">Become a Cross Border Leader</a>
         </div>
-        <a href={`${CBD_URL}/#join`} className="md:hidden btn-cbd btn-cbd-primary px-3 py-2 text-sm">Join</a>
+        <button
+          type="button"
+          className="lg:hidden -mr-2 p-2 text-foreground"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-nav"
+          onClick={() => setMenuOpen((o) => !o)}
+        >
+          <svg viewBox="0 0 24 24" className="size-6" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden>
+            {menuOpen ? <path d="M6 6l12 12M18 6L6 18" /> : <path d="M4 7h16M4 12h16M4 17h16" />}
+          </svg>
+        </button>
       </div>
+      {menuOpen && (
+        <nav id="mobile-nav" className="lg:hidden border-t border-border bg-background px-6 pb-6 pt-2 text-base font-medium">
+          <ul className="flex flex-col">
+            {NAV.map((l) => (
+              <li key={l.label}>
+                <a href={l.href} onClick={() => setMenuOpen(false)} className="block py-3 text-muted-foreground hover:text-cbd-blue transition-colors">
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-4 flex flex-col gap-3 md:hidden">
+            <a href={`${CBD_URL}/become-a-partner`} className="btn-cbd btn-cbd-secondary px-4 py-2.5 text-sm text-center">Become a Partner</a>
+            <a href={`${CBD_URL}/#join`} className="btn-cbd btn-cbd-primary px-4 py-2.5 text-sm text-center">Become a Cross Border Leader</a>
+          </div>
+        </nav>
+      )}
     </header>
   );
 }
@@ -115,7 +145,7 @@ export default function App() {
     <div id="top" className="min-h-screen bg-background text-foreground">
       <Header />
       <main className="pt-16 md:pt-20">
-        <section id="gallery" className="mx-auto max-w-7xl px-6 lg:px-10 py-16 md:py-24">
+        <section id="gallery" className="scroll-mt-20 md:scroll-mt-24 mx-auto max-w-7xl px-6 lg:px-10 py-16 md:py-24">
           <SectionHeading label="Outcomes" title={<>All <span className="text-cbd-blue">projects</span></>}>
             Everything built by young people at our hackathon. Hover over a project to scroll through it.
           </SectionHeading>
