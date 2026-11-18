@@ -1,0 +1,47 @@
+{
+  "slug": "tander",
+  "url": "https://tander.macaly.app",
+  "finalUrl": "https://tander.macaly.app/",
+  "team": "Each holds the piece",
+  "capturedAt": "2026-11-18T18:35:02.858Z",
+  "title": "TANDER | Experts for interdisciplinary AI projects",
+  "metaDescription": "Share a rough project question, see it through technology, arts and humanities lenses, meet experts like ethicists, artists and patient representatives, measure your team's t-index, and check who is heard.",
+  "headings": [
+    {
+      "level": 1,
+      "text": "Good questions deserve more than one point of view."
+    },
+    {
+      "level": 2,
+      "text": "Start with the question you actually have"
+    }
+  ],
+  "bodyText": "TANDER. PROJECT / 0042 · FICTIONAL DATA LOG IN TANDER T-INDEX FUNDER'S ACCESS ABOUT OUR PROJECT A GENTLE WAY TO WIDEN YOUR PROJECT TEAM Good questions deserve more than one point of view. TANDER makes transdisciplinarity easy and impactful. Share the question you are holding, see what other perspectives would ask of it, meet people who could join the conversation, and check that everyone on the team is actually heard. STEP 01 Start with the question you actually have Rough is fine. TANDER works with the question exactly as it is right now. Your project question, in your own words Let's look at it together Then we see it through different lenses, and meet people who are missing from the room. TANDER is a demo. Everyone here is fictional, kindly so. Made with AI in Macaly ×",
+  "sections": [
+    {
+      "y": 95,
+      "height": 922,
+      "tag": "div",
+      "id": "panel-tander",
+      "heading": "Good questions deserve more than one point of view.",
+      "text": "A GENTLE WAY TO WIDEN YOUR PROJECT TEAM Good questions deserve more than one point of view. TANDER makes transdisciplinarity easy and impactful. Share the question you are holding, see what other perspectives would ask of it, meet people who could join the conversation, and check"
+    },
+    {
+      "y": 95,
+      "height": 529,
+      "tag": "section",
+      "heading": "Good questions deserve more than one point of view.",
+      "text": "A GENTLE WAY TO WIDEN YOUR PROJECT TEAM Good questions deserve more than one point of view. TANDER makes transdisciplinarity easy and impactful. Share the question you are holding, see what other perspectives would ask of it, meet people who could join the conversation, and check"
+    },
+    {
+      "y": 624,
+      "height": 393,
+      "tag": "section",
+      "heading": "Start with the question you actually have",
+      "text": "STEP 01 Start with the question you actually have Rough is fine. TANDER works with the question exactly as it is right now. Your project question, in your own words Let's look at it together Then we see it through different lenses, and meet people who are missing from the room."
+    }
+  ],
+  "httpStatus": 200,
+  "fullHeight": 1194,
+  "fullHeightUncapped": 1194
+}

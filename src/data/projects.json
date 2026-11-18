@@ -82,5 +82,20 @@
     },
     "fullHeight": 2065,
     "featured": false
+  },
+  {
+    "slug": "tander",
+    "url": "https://tander.macaly.app",
+    "title": "TANDER",
+    "tagline": "Making transdisciplinary collaboration easy",
+    "description": "TANDER helps project teams make transdisciplinary collaboration easier and more impactful: it spots missing perspectives, suggests experts from other disciplines and shows how different actors can contribute to a shared challenge. Its T-INDEX assesses the depth of collaboration, how decision-making power is distributed and whether affected people are involved, helping teams build more inclusive projects and show their value to funders. The site is a demo with fictional people and data.",
+    "category": "Uncategorized",
+    "team": "Each holds the piece",
+    "highlight": {
+      "y": 95,
+      "height": 922
+    },
+    "fullHeight": 1194,
+    "featured": false
   }
 ]
