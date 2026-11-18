@@ -97,5 +97,19 @@
     },
     "fullHeight": 1194,
     "featured": false
+  },
+  {
+    "slug": "life-after-coal",
+    "url": "https://life-after-coal.vercel.app/",
+    "title": "Life After Coal",
+    "tagline": "Every support programme for miners, in one place",
+    "description": "A guide for miners and their families in Czech and Polish Silesia, in Czech, Polish and English. It gathers 75 support programmes from both sides of the border, and a short questionnaire shows which apply to you and what to do next, alongside a map, a deadline calendar and an assistant that answers only from the listed programmes. The site is a preview and says it is a guide, not legal or financial advice.",
+    "category": "Uncategorized",
+    "highlight": {
+      "y": 113,
+      "height": 904
+    },
+    "fullHeight": 3721,
+    "featured": false
   }
 ]
